@@ -28,6 +28,7 @@ public class WebSecurityConfig {
 
   @Bean
   public UserDetailsService userDetailsService() {
+    // WE NEVER DO THIS IN PRODUCTION
     UserDetails user = User.withDefaultPasswordEncoder()
       .username("user")
       .password("password123")
