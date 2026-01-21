@@ -11,8 +11,8 @@ INSERT INTO orders (order_id, customer_id, order_info) values (RANDOM_UUID(), (S
 INSERT INTO orders (order_id, customer_id, order_info) values (RANDOM_UUID(), (SELECT customer_id FROM customers where name = 'Callahan Auto'), '200 Widgets');
 
 -- Start: JDBC AUTHENTICATION
-INSERT INTO users (username, password, enabled) values ('user','passwordjdbc', true);
-INSERT INTO users (username, password, enabled) values ('admin','passwordjdbc', true);
+INSERT INTO users (username, password, enabled) values ('user','{bcrypt}$2a$10$MLPsMWU5z/6Wt3h3JDzEr..id1C7xNlfqE9DcBPNU180mG7thKOPG', true);
+INSERT INTO users (username, password, enabled) values ('admin','{bcrypt}$2a$10$MLPsMWU5z/6Wt3h3JDzEr..id1C7xNlfqE9DcBPNU180mG7thKOPG', true);
 
 INSERT INTO authorities(username, authority) values('user','ROLE_USER');
 INSERT INTO authorities(username, authority) values('admin','ROLE_USER');
